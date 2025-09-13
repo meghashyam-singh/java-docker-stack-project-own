@@ -1,0 +1,43 @@
+version: "3"
+services:
+  service1:
+    image: meghashyam792/java-docker-stack-project-own-images:s1
+    ports:
+      - "8080"
+    networks:
+      - s1-network
+    deploy:
+      replicas: 2
+
+  service2:
+    image: meghashyam792/java-docker-stack-project-own-images:s2
+    ports:
+      - "8080"
+    networks:
+      - s2-network
+    deploy:
+      replicas: 2
+
+  service3:
+    image: meghashyam792/java-docker-stack-project-own-images:s3
+    ports:
+      - "8080"
+    networks:
+      - s3-network
+    deploy:
+      replicas: 2
+
+  service4:
+    image: meghashyam792/java-docker-stack-project-own-images:s4
+    ports:
+      - "8080"
+    networks:
+      - s4-network
+    deploy:
+      replicas: 2
+
+networks:
+  s1-network:
+  s2-network:
+  s3-network:
+  s4-network:
