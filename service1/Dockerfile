@@ -1,3 +1,3 @@
 FROM tomcat:8.0.20-jre8
 COPY tomcat-users.xml /usr/local/tomcat/conf
-COPY service1/target/*.war /usr/local/tomcat/webapps/meghashyam.war
+COPY ./service1/target/*.war /usr/local/tomcat/webapps/meghashyam.war
