@@ -8,6 +8,8 @@ services:
       - s1-network
     deploy:
       replicas: 2
+    volumes:
+      - volume1:/usr/local/tomcat/webapps
 
   service2:
     image: meghashyam792/java-docker-stack-project-own-images:s2
@@ -17,6 +19,8 @@ services:
       - s2-network
     deploy:
       replicas: 2
+    volumes:
+      - volume2:/usr/local/tomcat/webapps
 
   service3:
     image: meghashyam792/java-docker-stack-project-own-images:s3
@@ -26,6 +30,8 @@ services:
       - s3-network
     deploy:
       replicas: 2
+    volumes:
+      - volume3:/usr/local/tomcat/webapps
 
   service4:
     image: meghashyam792/java-docker-stack-project-own-images:s4
@@ -35,9 +41,17 @@ services:
       - s4-network
     deploy:
       replicas: 2
+    volumes:
+      - volume4:/usr/local/tomcat/webapps
 
 networks:
   s1-network:
   s2-network:
   s3-network:
   s4-network:
+
+volumes:
+  volume1:
+  volume2:
+  volume3:
+  volume4:
